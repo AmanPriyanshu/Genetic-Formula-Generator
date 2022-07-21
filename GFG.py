@@ -180,7 +180,7 @@ if __name__ == '__main__':
 	b = np.random.normal(loc=0.0, scale=5, size=N)
 	c = np.random.randint(low=0, high=5, size=N)
 	d = np.ones(shape=(N,))*5
-	y = (a-b)*(c/d)
+	y = (-b)*(c/d)
 
 	gfg = GeneticFormulaGenerator(operators=[add, sub, mul, div, neg], operands=[a, b, c, d], target=y, max_genome_sequence=10)
 	sorted_pop = gfg.search()
